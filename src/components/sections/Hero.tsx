@@ -27,7 +27,7 @@ export default function Hero() {
                 </span>
               ))}
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-heading font-black text-white leading-tight mb-6">
               بوابتك للغات والإعلاميات...
               <br />
               <span className="text-secondary-500">من الناظور إلى العالم</span>

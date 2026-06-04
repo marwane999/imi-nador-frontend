@@ -95,7 +95,7 @@ export default function InformatiquesPage() {
         </motion.div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div
             ref={coursesAnimation.ref}
@@ -142,7 +142,7 @@ export default function InformatiquesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div
             ref={whyAnimation.ref}
@@ -193,7 +193,7 @@ export default function InformatiquesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-primary-500">
+      <section className="py-16 md:py-20 bg-primary-500 overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div
             ref={statsAnimation.ref}
@@ -207,7 +207,7 @@ export default function InformatiquesPage() {
               light
             />
           </motion.div>
-          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
             {stats.map((stat) => (
               <motion.div
                 key={stat.label}
@@ -226,7 +226,7 @@ export default function InformatiquesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-gray-50 overflow-hidden">
         <motion.div
           ref={ctaAnimation.ref}
           variants={ctaAnimation.variants}

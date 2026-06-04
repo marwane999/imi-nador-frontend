@@ -43,7 +43,7 @@ export default function ArabPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <SectionHeading title="صيغ التكوين" subtitle="برنامج مخصص حسب طلبك" />
           <motion.div
@@ -73,7 +73,7 @@ export default function ArabPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <SectionHeading title="المستويات" subtitle="من A1 إلى B1" />
           <motion.div
@@ -96,7 +96,7 @@ export default function ArabPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <SectionHeading title="خيارات إضافية" subtitle="اختر المسار الذي يناسبك" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
@@ -115,7 +115,7 @@ export default function ArabPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <SectionHeading

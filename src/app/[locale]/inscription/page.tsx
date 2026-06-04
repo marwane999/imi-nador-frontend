@@ -50,7 +50,7 @@ export default function InscriptionPage() {
         </motion.div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
             <div className="lg:col-span-3">
@@ -138,7 +138,7 @@ export default function InscriptionPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div
             ref={trustAnimation.ref}

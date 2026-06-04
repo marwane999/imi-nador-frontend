@@ -41,7 +41,7 @@ export default function Testimonials() {
   const t = testimonials[current];
 
   return (
-    <section className="py-16 md:py-20">
+    <section className="py-16 md:py-20 overflow-hidden">
       <div className="container mx-auto px-4">
         <SectionHeading
           title="ماذا يقول طلابنا؟"
@@ -51,9 +51,9 @@ export default function Testimonials() {
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
               className="relative bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-100"
             >
               <Quote className="w-10 h-10 text-secondary-200 mb-4" />

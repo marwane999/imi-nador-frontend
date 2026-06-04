@@ -45,7 +45,7 @@ export default function ContactPage() {
         </motion.div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
             <div className="lg:col-span-3">
@@ -93,7 +93,7 @@ export default function ContactPage() {
                 animate={socialAnimation.controls}
               >
                 <h3 className="text-xl font-heading font-bold text-primary-500 mb-4">تابعنا على</h3>
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
                   <Button variant="outline" size="lg" className="gap-2" asChild>
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                       <Facebook className="w-5 h-5" />
@@ -113,7 +113,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <SectionHeading
             title="موقعنا على الخريطة"
@@ -134,7 +134,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <SectionHeading
             title="إجراءات سريعة"
