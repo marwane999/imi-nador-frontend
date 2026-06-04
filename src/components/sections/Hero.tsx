@@ -1,21 +1,23 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] flex items-center pt-20 bg-gradient-to-br from-primary-900 via-primary-700 to-primary-500 overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center pt-20 bg-gradient-to-br from-primary-900 via-primary-700 to-primary-500 overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-72 h-72 bg-secondary-500 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent-500 rounded-full blur-3xl" />
       </div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="flex-1"
           >
             <div className="flex flex-wrap gap-2 mb-6">
               {['DELF', 'Goethe', 'IELTS', 'TOEFL', 'DELE'].map((cert) => (
@@ -47,6 +49,24 @@ export default function Hero() {
               >
                 <Link href="/contact">اطلب استشارة مجانية</Link>
               </Button>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="flex-1 w-full max-w-lg"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+              <Image
+                src="/images/hero-classroom.jpg"
+                alt="طلاب في قاعة الدراسة"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 to-transparent" />
             </div>
           </motion.div>
         </div>
