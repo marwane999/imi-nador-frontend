@@ -49,14 +49,14 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
-    <html lang="ar" dir="rtl">
+    <html lang={locale} dir="rtl">
       <body
         className={`${tajawal.variable} ${cairo.variable} font-body bg-white text-[#1A1A2E] antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           <main>{children}</main>
           <Footer />
