@@ -1,7 +1,7 @@
 FROM node:20-alpine AS development
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 COPY . .
 EXPOSE 3000
 CMD ["npm", "run", "dev"]
@@ -9,7 +9,7 @@ CMD ["npm", "run", "dev"]
 FROM node:20-alpine AS build
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 COPY . .
 RUN npm run build
 
@@ -20,5 +20,6 @@ COPY --from=build /app/public ./public
 COPY --from=build /app/package*.json ./
 COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/next.config.mjs ./
+COPY --from=build /app/package-lock.json ./package-lock.json
 EXPOSE 3000
 CMD ["npm", "start"]
