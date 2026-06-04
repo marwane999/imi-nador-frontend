@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone, Smartphone, Mail, Facebook, MessageCircle } from 'lucide-react';
 
 const quickLinks = [
@@ -26,9 +27,13 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="text-3xl font-heading font-black text-secondary-500 mb-4">
-              IMI <span className="text-white">الناظور</span>
-            </div>
+            <Image
+              src="/images/head_01.jpg"
+              alt="IMI Nador"
+              width={160}
+              height={60}
+              className="h-16 w-auto object-contain mb-4"
+            />
             <p className="text-gray-300 text-sm leading-relaxed">
               معهد الإعلاميات والوسائط المتعددة بالناظور — متخصصون في تعليم اللغات الحية
               والإعلاميات منذ أكثر من 15 عاماً. شريكك الموثوق لتعلم اللغات والشهادات الدولية.

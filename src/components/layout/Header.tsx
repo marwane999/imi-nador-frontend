@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Phone, Menu, X } from 'lucide-react';
@@ -42,9 +43,15 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-heading font-black text-primary-500">IMI</span>
-            <span className="text-lg font-heading text-primary-700">الناظور</span>
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/images/head_01.jpg"
+              alt="IMI Nador"
+              width={120}
+              height={48}
+              className="h-12 w-auto object-contain"
+              priority
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -145,7 +152,13 @@ export default function Header() {
               className="fixed top-0 right-0 bottom-0 w-80 bg-white z-50 lg:hidden shadow-2xl"
             >
               <div className="flex items-center justify-between p-4 border-b">
-                <span className="text-xl font-heading font-black text-primary-500">IMI الناظور</span>
+                <Image
+                  src="/images/head_01.jpg"
+                  alt="IMI Nador"
+                  width={100}
+                  height={40}
+                  className="h-10 w-auto object-contain"
+                />
                 <button
                   onClick={() => setMobileOpen(false)}
                   className="p-2 text-gray-500 hover:text-primary-500"
